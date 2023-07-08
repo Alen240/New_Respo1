@@ -1,0 +1,34 @@
+{% extends 'home.html' %}
+{% block body_block %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg">
+            <h2>Signup</h2>
+            <form method="post"></form>
+            <div class="inputbox">
+                <input type="text" name="username">
+                <i class="fa-solid fa-user"></i>
+                <span>Username</span>
+            </div>
+            <div class="inputbox">
+                <input type="text" name="email">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email</span>
+            </div>
+            <div class="inputbox">
+                <input type="text" name="password">
+                <i class="fa-solid fa-lock"></i>
+                <span>Password</span>
+            </div>
+            <div class="inputbox">
+                <input type="text" name="cfpassword">
+                <i class="fa-solid fa-lock"></i>
+                <span>Confirm Password</span>
+            </div>
+            <div class="inputbox">
+                <input type="submit" value="Create Account"> 
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

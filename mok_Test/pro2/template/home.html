@@ -1,0 +1,167 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a href="" class="navbar-brand">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a href="{% url 'home' %}" class="nav-link">Home</a></li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    About
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                <li class="nav-item"><a href="{% url 'usersignup' %}" class="nav-link">Signup</a></li>
+                <li class="nav-item"><a href="{% url 'userlogin' %}" class="nav-link">Login</a></li>
+                <li class="nav-item"><a href="{% url 'cart' %}" class="nav-link">My Cart</a></li>
+            </ul>
+          </div>
+    </nav>
+
+    {% block body_block %}
+<div class="container">
+    <div class="row">
+        
+    </div>
+</div>
+
+    <div class="container">
+        <h1 class="featured">Featured Products</h1>
+        <div class="row mt-5">
+           {% for i in k %}
+           <div class="col-lg-4 mb-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{i.product_img.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title"><a href="{% url 'product' i.id %}">{{i.product_name}}</a></h5>
+                    <p><span class="discount">(78% off)</span> ₹598 <br>M.R.P: <del>₹2,715</del></p>
+                <p class="card-text">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star star"></i>
+                </p>
+                <a href="{% url 'cart' %}" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+           <!-- <div class="col-lg-4">
+            <div class="card" style="width: 18rem;">
+            <img src="../static/images/shirt2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Lymio
+                    Casual Shirt for Men||</h5>
+                    <p><span class="discount">(73% off)</span> ₹398 <br>M.R.P: <del>₹1,499</del></p>
+                <p class="card-text"> <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star star"></i></p>
+                <a href="#" class="btn btn-primary">Add To Cart</a>
+                </div>
+                </div>
+            </div>
+           <div class="col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <img src="../static/images/shirt3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">ELYYORK
+                        Men Shirt</h5>
+                    <p><span class="discount">(92% off)</span>₹419 <br>M.R.P:<del> ₹4,999</del></p>
+                    <p class="card-text">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star star"></i></p>
+                    <a href="#" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                    </div>
+           </div>   -->
+        </div>
+        <!-- <div class="row mt-5 mb-5">
+            <div class="col-lg-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="../static/images/t-shirt1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">DHRUVI TRENDZ
+                    Men's Shirts || Rayon Tropical Printed Shirts </h5>
+                <p><span class="discount">(74% off)</span>₹489 <br>M.R.P:<del> ₹1,849</del></p>
+                <p class="card-text">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star star"></i>
+                    <i class="fa-solid fa-star star"></i></p>
+                </p>
+                <a href="#" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="../static/images/t-shirt2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">ADRO
+                    Men's Cotton Hooded Neck Hoodies
+                    3.8 out of 5 stars 24</h5>
+                <p><span class="discount">(-54%)</span>₹1,299<br>
+                    M.R.P.:<del> ₹2,799</del></p>    
+                <p class="card-text">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i></p>
+                <a href="#" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="../static/images/t-shirt3.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">EYEBOGLER Mens Cotton Regular Fit T-Shirt Grey</h5>
+                <p><span class="discount">(-10%)</span>₹599<del><br>M.R.P.: ₹1299 </del></p>
+                <p class="card-text">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star star"></i>
+                </p>
+                <a href="#" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div> -->
+    </div>
+    {% endblock %}
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+</body>
+</html>

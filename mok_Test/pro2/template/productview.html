@@ -1,0 +1,78 @@
+{% extends 'home.html' %}
+{% block body_block %}
+<div class="container"><div class="row mt-5">
+    {% for i in k %}
+    <div class="col-lg-5">
+        <img src="{{i.product_img.url}}" alt="">
+    </div>
+    <div class="col-lg-7">
+        <h2>{{i.product_name}}</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam perferendis nulla veritatis eius natus a sint pariatur! Expedita laboriosam sunt, iusto minus ab in autem omnis rem accusantium minima ea.</p>
+        <p>{{i.product_descrip}}</p>
+        <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star star"></i>
+
+    </div>
+    {% endfor %}
+    <!-- <div class="container-fluid">
+        <h1 class="featured">Related</h1>
+        <div class="row">
+            <div class="col-lg-3 mr-2">
+                    <div class="card" style="width: 18rem;">
+                    <img src="../static/images/t-shirt3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">EYEBOGLER Mens Cotton Regular Fit T-Shirt Grey</h5>
+                 <p><span class="discount">(-10%)</span>₹599<del><br>M.R.P.: ₹1299 </del></p>
+                 <p class="card-text">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star star"></i>
+                </p>
+                <a href="#" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                </div>
+        </div>
+            <div class="col-lg-3 mr-2">
+                <div class="card" style="width: 18rem;">
+                    <img src="../static/images/t-shirt3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">EYEBOGLER Mens Cotton Regular Fit T-Shirt Grey</h5>
+                 <p><span class="discount">(-10%)</span>₹599<del><br>M.R.P.: ₹1299 </del></p>
+                 <p class="card-text">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star star"></i>
+                </p>
+                <a href="#" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 mr-2">
+                <div class="card" style="width: 18rem;">
+                    <img src="../static/images/t-shirt3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">EYEBOGLER Mens Cotton Regular Fit T-Shirt Grey</h5>
+                 <p><span class="discount">(-10%)</span>₹599<del><br>M.R.P.: ₹1299 </del></p>
+                 <p class="card-text">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star star"></i>
+                </p>
+                <a href="#" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div> -->
+{% endblock %}
